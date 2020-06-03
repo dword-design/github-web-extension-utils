@@ -1,0 +1,28 @@
+{
+  "name": "@dword-design/github-extension-utils",
+  "version": "1.0.0",
+  "description": "",
+  "repository": "dword-design/github-extension-utils",
+  "license": "MIT",
+  "author": "Sebastian Landwehr <info@dword-design.de>",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "commit": "base commit",
+    "dev": "base dev",
+    "prepare": "base prepare",
+    "prepublishOnly": "base prepublishOnly",
+    "test": "base test"
+  },
+  "dependencies": {
+    "@dword-design/functions": "^1.1.2"
+  },
+  "devDependencies": {
+    "@dword-design/base": "^6.15.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
