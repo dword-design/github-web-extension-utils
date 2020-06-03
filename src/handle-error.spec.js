@@ -1,5 +1,9 @@
 import handleError from './handle-error'
 
 export default {
-  'missing token key': () => expect(handleError).toThrow('Missing token key'),
+  'missing name': () => expect(handleError).toThrow("Missing option 'name'"),
+  'missing slug': () =>
+    expect(() => handleError(undefined, { name: 'foo' })).toThrow(
+      "Missing option 'slug'"
+    ),
 }

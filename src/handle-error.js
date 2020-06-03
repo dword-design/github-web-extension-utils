@@ -18,18 +18,21 @@ const getTokenMessage = error => {
 }
 
 export default (error, options = {}) => {
-  if (!options.tokenKey) {
-    throw new Error('Missing token key')
+  if (!options.name) {
+    throw new Error("Missing option 'name'")
+  }
+  if (!options.slug) {
+    throw new Error("Missing option 'slug'")
   }
   const tokenMessage = getTokenMessage(error)
   if (tokenMessage) {
-    let $flash = document.querySelector('.github-repository-list-badges-flash')
+    let $flash = document.querySelector(`.${options.slug}-flash`)
     if ($flash) {
       $flash.remove()
     }
     $flash = document.createElement('div')
     $flash.classList.add(
-      'github-repository-list-badges-flash',
+      `${options.slug}-flash`,
       'flash',
       'flash-error',
       'position-fixed',
@@ -72,10 +75,10 @@ export default (error, options = {}) => {
     $flashButton.style.whiteSpace = 'normal'
     $flashButton.style.textAlign = 'left'
     $flashButton.classList.add('btn-link', 'text-orange', 'bg-red-light')
-    $flashButton.innerText = `GitHub Repository List Badges: ${tokenMessage}`
+    $flashButton.innerText = `${options.name}: ${tokenMessage}`
     $flash.append($flashButton)
     $flashButton.onclick = () => {
-      const $dialog = showDialog()
+      const $dialog = showDialog(options)
 
       const $token = document.createElement('input')
       $token.classList.add('form-control', 'input-block')
@@ -87,7 +90,7 @@ export default (error, options = {}) => {
       const $form = document.createElement('form')
       $form.onsubmit = event => {
         event.preventDefault()
-        localStorage.setItem(options.tokenKey, $token.value)
+        localStorage.setItem(`${options.slug}-token`, $token.value)
         window.location.reload()
       }
       $dialog.append($form)
