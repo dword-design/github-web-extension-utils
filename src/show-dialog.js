@@ -23,10 +23,8 @@ export default options => {
   $dialog.style.transform = 'translate(-50%, -50%)'
   $dialog.style.maxWidth = 'calc(100% - 32px)'
   $dialog.style.zIndex = 34
-
   const $header = document.createElement('div')
   $header.classList.add('Box-header')
-
   const $close = document.createElement('button')
   $close.classList.add('Box-btn-octicon', 'btn-octicon', 'float-right')
   $close.setAttribute('type', 'button')
@@ -35,7 +33,6 @@ export default options => {
     '<svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"></path></svg>'
   $close.onclick = () => $dialog.remove()
   $header.append($close)
-
   const $title = document.createElement('h3')
   $title.classList.add('Box-title')
   $title.innerHTML = endent`

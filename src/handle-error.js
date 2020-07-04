@@ -1,8 +1,8 @@
 import { endent } from '@dword-design/functions'
+
 import showDialog from './show-dialog'
 
 const accessTokenUrl = '/settings/tokens/new?scopes=repo'
-
 const getTokenMessage = error => {
   switch (error.response?.status) {
     case 401:
@@ -79,14 +79,12 @@ export default (error, options = {}) => {
     $flash.append($flashButton)
     $flashButton.onclick = () => {
       const $dialog = showDialog(options)
-
       const $token = document.createElement('input')
       $token.classList.add('form-control', 'input-block')
       $token.type = 'text'
       $token.placeholder = 'Access token'
       $token.setAttribute('aria-label', 'Access token')
       $token.required = true
-
       const $form = document.createElement('form')
       $form.onsubmit = event => {
         event.preventDefault()
@@ -94,35 +92,28 @@ export default (error, options = {}) => {
         window.location.reload()
       }
       $dialog.append($form)
-
       const $body = document.createElement('div')
       $body.classList.add('Box-body')
       $form.append($body)
-
       const $message = document.createElement('p')
       $message.innerHTML = `GitHub API requests are limited to 60 per hour per IP address. By providing a <a href="${accessTokenUrl}" target="_blank">GitHub access token</a>, you can increase the limit to <strong>5.000</strong> requests per hour.`
       $body.append($message)
-
       $body.append($token)
-
       const $footer = document.createElement('div')
       $footer.classList.add('Box-footer', 'text-right')
       $form.append($footer)
-
       const $cancel = document.createElement('button')
       $cancel.type = 'button'
       $cancel.classList.add('btn', 'mr-2')
       $cancel.innerText = 'Cancel'
       $cancel.onclick = () => $dialog.remove()
       $footer.append($cancel)
-
       const $save = document.createElement('button')
       $save.classList.add('btn', 'btn-primary')
       $save.type = 'submit'
       $save.innerText = 'Save'
       $footer.append($save)
     }
-
     document.body.prepend($flash)
   } else {
     console.error(error)
