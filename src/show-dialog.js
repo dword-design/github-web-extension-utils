@@ -1,14 +1,14 @@
 import { endent } from '@dword-design/functions'
 
-export default () => {
-  let $dialog = document.querySelector('.github-repository-list-badges-dialog')
+export default options => {
+  let $dialog = document.querySelector(`.${options.slug}-dialog`)
   if ($dialog) {
     $dialog.remove()
   }
   $dialog = document.createElement('div')
   $dialog.setAttribute('role', 'dialog')
   $dialog.classList.add(
-    'github-repository-list-badges-dialog',
+    `${options.slug}-dialog`,
     'Box',
     'Box--overlay',
     'Box-overlay--wide',
@@ -43,7 +43,7 @@ export default () => {
       <path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 000 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 00.01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path>
     </svg>
     <span class="sr-only">Error:</span>
-    GitHub Repository List Badges
+    ${options.name}
   `
   $header.append($title)
   $dialog.append($header)

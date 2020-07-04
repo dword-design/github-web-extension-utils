@@ -1,16 +1,16 @@
 <!-- TITLE/ -->
-# @dword-design/github-extension-utils
+# @dword-design/github-web-extension-utils
 <!-- /TITLE -->
 
 <!-- BADGES/ -->
-[![NPM version](https://img.shields.io/npm/v/@dword-design/github-extension-utils.svg)](https://npmjs.org/package/@dword-design/github-extension-utils)
+[![NPM version](https://img.shields.io/npm/v/@dword-design/github-web-extension-utils.svg)](https://npmjs.org/package/@dword-design/github-web-extension-utils)
 ![Linux macOS Windows compatible](https://img.shields.io/badge/os-linux%20%7C%C2%A0macos%20%7C%C2%A0windows-blue)
-[![Build status](https://img.shields.io/github/workflow/status/dword-design/github-extension-utils/build)](https://github.com/dword-design/github-extension-utils/actions)
-[![Coverage status](https://img.shields.io/coveralls/dword-design/github-extension-utils)](https://coveralls.io/github/dword-design/github-extension-utils)
-[![Dependency status](https://img.shields.io/david/dword-design/github-extension-utils)](https://david-dm.org/dword-design/github-extension-utils)
+[![Build status](https://img.shields.io/github/workflow/status/dword-design/github-web-extension-utils/build)](https://github.com/dword-design/github-web-extension-utils/actions)
+[![Coverage status](https://img.shields.io/coveralls/dword-design/github-web-extension-utils)](https://coveralls.io/github/dword-design/github-web-extension-utils)
+[![Dependency status](https://img.shields.io/david/dword-design/github-web-extension-utils)](https://david-dm.org/dword-design/github-web-extension-utils)
 ![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen)
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/dword-design/github-extension-utils)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/dword-design/github-web-extension-utils)
 <!-- /BADGES -->
 
 <!-- DESCRIPTION/ -->
@@ -22,10 +22,10 @@
 
 ```bash
 # NPM
-$ npm install @dword-design/github-extension-utils
+$ npm install @dword-design/github-web-extension-utils
 
 # Yarn
-$ yarn add @dword-design/github-extension-utils
+$ yarn add @dword-design/github-web-extension-utils
 ```
 <!-- /INSTALL -->
 
