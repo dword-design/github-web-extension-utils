@@ -1,3 +1,10 @@
+## [1.1.6](https://github.com/dword-design/github-web-extension-utils/compare/v1.1.5...v1.1.6) (2021-03-23)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/functions to v3 ([#11](https://github.com/dword-design/github-web-extension-utils/issues/11)) ([f305254](https://github.com/dword-design/github-web-extension-utils/commit/f305254d759eba6ec377ba571a1f4b2cdd10c704))
+
 ## [1.1.5](https://github.com/dword-design/github-web-extension-utils/compare/v1.1.4...v1.1.5) (2021-03-22)
 
 
