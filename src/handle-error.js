@@ -3,6 +3,7 @@ import { endent } from '@dword-design/functions'
 import showDialog from './show-dialog'
 
 const accessTokenUrl = '/settings/tokens/new?scopes=repo'
+
 const getTokenMessage = error => {
   switch (error.response?.status) {
     case 401:
@@ -11,6 +12,7 @@ const getTokenMessage = error => {
       if (error.response.headers['x-ratelimit-remaining'] === '0') {
         return 'API rate limit exceeded. Please create an access token.'
       }
+
       return 'You are not allowed to access GitHub API. Please create an access token.'
     default:
       return undefined
@@ -24,6 +26,7 @@ export default (error, options = {}) => {
   if (!options.slug) {
     throw new Error("Missing option 'slug'")
   }
+
   const tokenMessage = getTokenMessage(error)
   if (tokenMessage) {
     let $flash = document.querySelector(`.${options.slug}-flash`)
@@ -69,6 +72,7 @@ export default (error, options = {}) => {
         <path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 000 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 00.01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path>
       </svg>
     `
+
     const $flashButton = document.createElement('button')
     $flashButton.type = 'button'
     $flashButton.style.padding = '16px 40px'
@@ -79,12 +83,14 @@ export default (error, options = {}) => {
     $flash.append($flashButton)
     $flashButton.onclick = () => {
       const $dialog = showDialog(options)
+
       const $token = document.createElement('input')
       $token.classList.add('form-control', 'input-block')
       $token.type = 'text'
       $token.placeholder = 'Access token'
       $token.setAttribute('aria-label', 'Access token')
       $token.required = true
+
       const $form = document.createElement('form')
       $form.onsubmit = event => {
         event.preventDefault()
@@ -92,22 +98,27 @@ export default (error, options = {}) => {
         window.location.reload()
       }
       $dialog.append($form)
+
       const $body = document.createElement('div')
       $body.classList.add('Box-body')
       $form.append($body)
+
       const $message = document.createElement('p')
       $message.innerHTML = `GitHub API requests are limited to 60 per hour per IP address. By providing a <a href="${accessTokenUrl}" target="_blank">GitHub access token</a>, you can increase the limit to <strong>5.000</strong> requests per hour.`
       $body.append($message)
       $body.append($token)
+
       const $footer = document.createElement('div')
       $footer.classList.add('Box-footer', 'text-right')
       $form.append($footer)
+
       const $cancel = document.createElement('button')
       $cancel.type = 'button'
       $cancel.classList.add('btn', 'mr-2')
       $cancel.innerText = 'Cancel'
       $cancel.onclick = () => $dialog.remove()
       $footer.append($cancel)
+
       const $save = document.createElement('button')
       $save.classList.add('btn', 'btn-primary')
       $save.type = 'submit'
