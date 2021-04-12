@@ -1,3 +1,10 @@
+## [1.1.7](https://github.com/dword-design/github-web-extension-utils/compare/v1.1.6...v1.1.7) (2021-04-12)
+
+
+### Bug Fixes
+
+* lock file maintenance ([#14](https://github.com/dword-design/github-web-extension-utils/issues/14)) ([21c86e6](https://github.com/dword-design/github-web-extension-utils/commit/21c86e668fcb21e6ac002db6fc87ac17b0768ce1))
+
 ## [1.1.6](https://github.com/dword-design/github-web-extension-utils/compare/v1.1.5...v1.1.6) (2021-03-23)
 
 
