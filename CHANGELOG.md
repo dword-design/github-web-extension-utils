@@ -1,3 +1,10 @@
+## [1.1.10](https://github.com/dword-design/github-web-extension-utils/compare/v1.1.9...v1.1.10) (2021-04-28)
+
+
+### Bug Fixes
+
+* updated package.json[description] ([#20](https://github.com/dword-design/github-web-extension-utils/issues/20)) ([391a6c9](https://github.com/dword-design/github-web-extension-utils/commit/391a6c924234eadf2c1bf8c531829342b48a8727))
+
 ## [1.1.9](https://github.com/dword-design/github-web-extension-utils/compare/v1.1.8...v1.1.9) (2021-04-22)
 
 
