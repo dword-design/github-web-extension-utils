@@ -1,3 +1,19 @@
+# [2.0.0](https://github.com/dword-design/github-web-extension-utils/compare/v1.1.10...v2.0.0) (2021-05-03)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/base to v8 ([#23](https://github.com/dword-design/github-web-extension-utils/issues/23)) ([5edcfbb](https://github.com/dword-design/github-web-extension-utils/commit/5edcfbba578213902cc593ae6152b0642846d183))
+
+
+### BREAKING CHANGES
+
+* require Node.js >= 12
+
+Co-authored-by: Renovate Bot <bot@renovateapp.com>
+Co-authored-by: Sebastian Landwehr <info@dword-design.de>
+Co-authored-by: GitHub Actions <actions@github.com>
+
 ## [1.1.10](https://github.com/dword-design/github-web-extension-utils/compare/v1.1.9...v1.1.10) (2021-04-28)
 
 
