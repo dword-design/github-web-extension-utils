@@ -1,3 +1,10 @@
+## [2.0.7](https://github.com/dword-design/github-web-extension-utils/compare/v2.0.6...v2.0.7) (2022-01-12)
+
+
+### Bug Fixes
+
+* update config files ([6dce5c3](https://github.com/dword-design/github-web-extension-utils/commit/6dce5c386b5eded74ba533dfedcbd884774dac82))
+
 ## [2.0.6](https://github.com/dword-design/github-web-extension-utils/compare/v2.0.5...v2.0.6) (2022-01-04)
 
 
