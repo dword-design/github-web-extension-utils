@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/dword-design/github-web-extension-utils/compare/v2.0.8...v3.0.0) (2024-03-04)
+
+
+### Bug Fixes
+
+* lock file maintenance ([#77](https://github.com/dword-design/github-web-extension-utils/issues/77)) ([fb73210](https://github.com/dword-design/github-web-extension-utils/commit/fb7321085358c01ec44beba5d8d08ad322861466))
+
+
+### BREAKING CHANGES
+
+* node.js >= 18
+
 ## [2.0.8](https://github.com/dword-design/github-web-extension-utils/compare/v2.0.7...v2.0.8) (2023-03-24)
 
 
