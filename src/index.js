@@ -1,3 +1,3 @@
-import handleError from './handle-error'
+import handleError from './handle-error.js'
 
 export { handleError }
