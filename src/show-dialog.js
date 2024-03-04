@@ -16,7 +16,7 @@ export default options => {
     'flex-column',
     'anim-fade-in',
     'fast',
-    'position-fixed'
+    'position-fixed',
   )
   $dialog.style.left = '50%'
   $dialog.style.top = '50%'

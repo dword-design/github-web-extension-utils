@@ -1,6 +1,6 @@
 import { endent } from '@dword-design/functions'
 
-import showDialog from './show-dialog'
+import showDialog from './show-dialog.js'
 
 const accessTokenUrl = '/settings/tokens/new?scopes=repo'
 
@@ -39,7 +39,7 @@ export default (error, options = {}) => {
       'flash',
       'flash-error',
       'position-fixed',
-      'box-shadow-medium'
+      'box-shadow-medium',
     )
     $flash.style.bottom = '16px'
     $flash.style.right = '16px'
