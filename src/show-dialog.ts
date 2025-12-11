@@ -1,7 +1,7 @@
 import endent from 'endent';
 
 export default (options: { name: string; slug: string }) => {
-  let $dialog = document.querySelector(`.${options.slug}-dialog`);
+  let $dialog = document.querySelector<HTMLElement>(`.${options.slug}-dialog`);
 
   if ($dialog) {
     $dialog.remove();
@@ -26,7 +26,7 @@ export default (options: { name: string; slug: string }) => {
   $dialog.style.top = '50%';
   $dialog.style.transform = 'translate(-50%, -50%)';
   $dialog.style.maxWidth = 'calc(100% - 32px)';
-  $dialog.style.zIndex = 34;
+  $dialog.style.zIndex = '34';
   const $header = document.createElement('div');
   $header.classList.add('Box-header');
   const $close = document.createElement('button');

@@ -33,7 +33,7 @@ export default (error: unknown, options: { name: string; slug: string }) => {
   const tokenMessage = getTokenMessage(error);
 
   if (tokenMessage) {
-    let $flash = document.querySelector(`.${options.slug}-flash`);
+    let $flash = document.querySelector<HTMLElement>(`.${options.slug}-flash`);
 
     if ($flash) {
       $flash.remove();
@@ -52,8 +52,8 @@ export default (error: unknown, options: { name: string; slug: string }) => {
     $flash.style.bottom = '16px';
     $flash.style.right = '16px';
     $flash.style.maxWidth = 'calc(100% - 32px)';
-    $flash.style.zIndex = 33;
-    $flash.style.padding = 0;
+    $flash.style.zIndex = '33';
+    $flash.style.padding = '0';
 
     $flash.innerHTML = endent`
       <button
